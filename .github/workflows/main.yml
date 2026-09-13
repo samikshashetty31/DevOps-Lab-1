@@ -1,0 +1,20 @@
+name: DevOps Lab Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Display message
+        run: echo "GitHub Actions workflow executed successfully"
+
+      - name: List files
+        run: ls
